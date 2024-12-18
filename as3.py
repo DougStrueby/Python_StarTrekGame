@@ -11,7 +11,6 @@ X = random.randint(0, WIDTH - 1)
 Y = random.randint(0, HEIGHT - 1)
 
 # objects
-# used assignment 4 major spoilers (https://pages.cpsc.ucalgary.ca/~aycock/217/as3.html)
 
 EMPTY = '.'
 ENTERPRISE = 'E'
@@ -45,7 +44,7 @@ def map_print(p_map):
 # if they are in range they shoot with a 42% chance of hitting (21 / 50)
 # randomly generating a random integer to use as the damage of the attack
 # if they hit the enterprise print klingon location and the remaining energy of the enterprise
-# if they miss print where the klingon is and that they missed
+# if they misprint where the klingon is and that they missed
 
 def klingon_range():
     global enterprise_energy
@@ -65,7 +64,7 @@ def klingon_range():
 # first bounds check on x and y is to keep the enterprise from looping around
 # then checking if the movement is blocked by a star
 # lastly checking if the space is a klingon in which place the boop command is run
-# if klinon health is greater then 0 return the variable if it is below 0 pop it off the dictionary
+# if klingon health is greater than 0 return the variable if it is below 0 pop it off the dictionary
 
 def bounds_check(p_x, p_y):
     global X
@@ -96,7 +95,6 @@ def bounds_check(p_x, p_y):
 
     print(klingons)
 # map
-# used assignment 3 major spoilers (https://pages.cpsc.ucalgary.ca/~aycock/217/as3.html)
 
 map = []
 for y in range(HEIGHT):
@@ -116,7 +114,7 @@ ALIASES = {
 # stars and klingons
 # calling the random_position function to generate 10 stars on putting them onto the map
 # checking if two stars are generated in the same spot
-# if so repeat the function until there arent repeats
+# if so repeat the function until there aren't repeats
 
 for _ in range(10):
     star = random_position()
@@ -162,7 +160,7 @@ while True:
     cmd = cmd.strip()
     cmd = cmd.lower()
 
-# testing if an alias is been inputted
+# testing if an alias has been inputted
 
     if cmd in ALIASES:
         cmd = ALIASES[cmd]
